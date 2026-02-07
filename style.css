@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.hero {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(43, 36, 36);
+  margin-bottom: 30px;
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+}
+
+.section-title {
+  font-size: 28px;
+  padding: 50px 0px;
+}
+
+.section-text {
+  font-size: 16px;
+}
+
+.profile-img {
+  width: 200px;
+  margin: 60px auto;
+}
+
+.profile {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.section-subtext {
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.services {
+  background-color: rgb(43, 36, 36);
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.service_header {
+  font-size: 22px;
+  text-align: center;
+}
+
+.service_grid {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service_icon {
+  width: 300px;
+  height: 300px;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  margin: 15px auto;
+  background-color: black;
+}
+
+.service_icon img {
+  width: 100%;
+}
+
+.service_title {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.service_text {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+
+h2,
+h3,
+p,
+li {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.portfolio {
+  background-color: rgb(43, 36, 36);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.portfolio_header {
+  font-size: 22px;
+  text-align: center;
+}
+
+.portfolio_container {
+  margin: 10px auto;
+  width: 50%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.portfolio_container img {
+  width: 10%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  transition: all ease-in-out 0.5s;
+}
+
+.portfolio_container img:hover {
+  width: 35%;
+}
+
+.progress {
+  background-color: rgb(43, 36, 36);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+}
+.progress_header{
+  text-align: center;
+  font-size: 22px;
+}
+.progress_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+}
+
+.box{
+  width: 300px;
+  height: 100px;
+  border: 1px solid yellow;
+}
+
+/* Page safety */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Center & limit width */
+.form-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-form {
+  width: 100%;
+  max-width: 420px;
+  /* perfect for mobile + tablet */
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px yellow;
+}
+
+/* Headings */
+.quote-form h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.quote-form p {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.quote-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+/* Inputs & textarea */
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  /* prevents mobile zoom */
+  border-radius: 8px;
+  border: 1px solid yellow;
+  background-color: black;
+  outline: none;
+}
+
+/* Focus effect */
+.quote-form input:focus,
+.quote-form textarea:focus {
+  border-color: yellow;
+}
+
+/* Textarea control */
+.quote-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button */
+.quote-form button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: black;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Button hover */
+.quote-form button:hover {
+  background: rgb(54, 54, 18);
+}
