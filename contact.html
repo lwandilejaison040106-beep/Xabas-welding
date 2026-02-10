@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Contact</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    header {
+      width: 100%;
+      height: 600px;
+      /* background-image: url("images/download (27).jpeg"); */
+      /* background-repeat: no-repeat; */
+      /* background-attachment: fixed; */
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero_grid {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .brend {
+      margin-top: 200px;
+    }
+
+    .massage {
+      font-size: 20px;
+      letter-spacing: 10px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .brend_name {
+      font-size: 50px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .hero_title {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero_nav {
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 30px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+      right: ;
+    }
+
+    footer {
+  background-color: rgb(43, 36, 36);
+  border-radius: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.footer_header {
+  font-size: 16px;
+  font-weight: bold;
+  color: yellow;
+  font-family: sans-serif;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.footer_grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer_nav {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer {
+  color: white;
+  font-size: 14px;
+  padding-top: 20px;
+  text-decoration: none;
+}
+.footer:hover {
+  color: yellow;
+}
+
+    /* Page safety */
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Center & limit width */
+    .form-container {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .quote-form {
+      width: 100%;
+      max-width: 420px;
+      /* perfect for mobile + tablet */
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px yellow;
+    }
+
+    /* Headings */
+    .quote-form h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .quote-form p {
+      font-size: 14px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    /* Labels */
+    .quote-form label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      margin-top: 16px;
+    }
+
+    /* Inputs & textarea */
+    .quote-form input,
+    .quote-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 16px;
+      /* prevents mobile zoom */
+      border-radius: 8px;
+      border: 1px solid yellow;
+      background-color: black;
+      outline: none;
+    }
+
+    /* Focus effect */
+    .quote-form input:focus,
+    .quote-form textarea:focus {
+      border-color: yellow;
+    }
+
+    /* Textarea control */
+    .quote-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Button */
+    .quote-form button {
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background: black;
+      border: 1px solid yellow;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* Button hover */
+    .quote-form button:hover {
+      background: rgb(54, 54, 18);
+    }
+
+    .trust-boost {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .page-label {
+  position: ;          /* stays in place */
+  left: 200px;
+  margin-top: 40px;
+  transform: translateY(50%);
+  
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  writing-mode: horizontal-tb; /* vertical text */
+  text-orientation: mixed;
+
+  opacity: 0;
+  animation: slideFadeIn 1.2s ease-out forwards;
+}
+
+/* Animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      min-height: 100vh;
+      color: #f5f7fa;
+      background: linear-gradient(270deg, #0a1cff, #1fe762, #0a1cff);
+      background-size: 600% 600%;
+      animation: gradientMove 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+     @media (max-width:1024px) {
+      .page-label {
+        font-size: 25px;
+      }
+
+      .hero_grid {
+        grid-template-columns: 400px 1fr;
+      }
+
+      .hero_nav {
+        width: 90%;
+      }
+
+      .content_flex {
+        height: 150px;
+      }
+
+      footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+
+    @media (max-width:768px) {
+      .hero_grid {
+        grid-template-columns: 200px 1fr;
+      }
+
+      .hero_nav {
+        width: 90%;
+      }
+
+      .massage {
+        font-size: 16px;
+        letter-spacing: 5px;
+      }
+
+      .brend_name {
+        font-size: 35px;
+      }
+
+      .content_flex {
+        height: 100px;
+      }
+
+      .span_content {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .progress {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+      }
+
+      .progress_subtitle {
+        font-size: 25px;
+      }
+
+      footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .footer {
+        padding-top: 5px;
+      }
+    }
+
+    @media (max-width:360px) {
+      .page-label {
+        font-size: 16px;
+        letter-spacing: 0px;
+        margin: 40px 0;
+      }
+
+      .hero_nav {
+        width: 100%;
+        margin: 3px 0;
+        padding-top: 30px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+      }
+
+      .hero_grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        margin: 30px 0;
+      }
+
+      .hero_title {
+        text-align: left;
+      }
+
+      .massage {
+        font-size: 14px;
+        letter-spacing: 0px;
+      }
+
+      .brend_name {
+        font-size: 25px;
+      }
+
+      footer {
+        padding: 40px 0px;
+      }
+
+      .footer_grid {
+        width: 90%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="hero_grid">
+      <div class="hero_title">
+        <h1 class="page-label">REACH US</h1>
+      </div>
+      <div class="hero_nav">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="project.html">Projects</a>
+          <a href="service.html">services</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">About Contact</a>
+        </nav>
+      </div>
+    </div>
+    <div class="brend">
+      <p class="massage">Providing all kinds of services</p>
+      <h1 class="brend_name">Xabas Welding C02 qaulity products</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <form class="quote-form">
+        <h2>Get Your Website Today</h2>
+        <p>Fill in the form below and I’ll get back to you within 24 hours.</p>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <label for="whatsapp">WhatsApp Number</label>
+        <input type="tel" id="whatsapp" placeholder="e.g. 071 234 5678" required>
+
+        <label for="message">write ypour massage</label>
+        <textarea id="message" rows="4" placeholder="Briefly explain what you need done" required></textarea>
+
+        <button type="submit">Request a Quote</button>
+
+        <p class="trust-boost">We well contact you as soon as possible, No obligation.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer_grid">
+      <div>
+        <h3 class="footer_header">ADDRESS</h3>
+        <nav class="footer_nav">
+          <a class="footer" href="" target="_blank">street</a>
+          <a class="footer" href="" target="_blank">contact</a>
+          <a class="footer" href="" target="_blank">Email</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer_header">WHO WE ARE</h3>
+        <nav class="footer_nav">
+          <a class="footer" href="" target="_blank">About us</a>
+          <a class="footer" href="" target="_blank">Our Values</a>
+          <a class="footer" href="" target="_blank">Working Process</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer_header">WEBSITE CREATOR</h3>
+        <nav class="footer_nav">
+          <a class="footer" href="" target="_blank">Lwandile Jaison</a>
+          <a class="footer" href="" target="_blank">Web Developer</a>
+          <a class="footer" href="" target="_blank">Portfolio</a>
+          <a class="footer" href="" target="_blank">Contact Developer</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

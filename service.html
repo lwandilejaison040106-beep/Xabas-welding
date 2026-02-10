@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Lwandile Jaison Kunene">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>services</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .page-label {
+      position: ;
+      /* stays in place */
+      left: 200px;
+      margin-top: 40px;
+      transform: translateY(50%);
+
+      font-size: 40px;
+      letter-spacing: 4px;
+      font-weight: 900;
+      writing-mode: horizontal-tb;
+      /* vertical text */
+      text-orientation: mixed;
+
+      opacity: 0;
+      animation: slideFadeIn 1.2s ease-out forwards;
+    }
+
+    header {
+      width: 100%;
+      height: 600px;
+      background-image: url("");
+      /* background-repeat: no-repeat; */
+      /* background-attachment: fixed; */
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero_grid {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .brend {
+      margin-top: 200px;
+    }
+
+    .massage {
+      font-size: 20px;
+      letter-spacing: 10px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .brend_name {
+      font-size: 50px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .hero_title {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero_nav {
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 30px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgb(112, 106, 106);
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    .flex-container {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      font-weight: 900;
+      padding: 40px 0px;
+    }
+
+    .section-text {
+      font-size: 16px;
+    }
+
+    .profile-img {
+      width: 200px;
+      margin: 60px auto;
+    }
+
+    .profile {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .section-subtext {
+      text-align: center;
+      font-size: 16px;
+    }
+
+
+    .services {
+      background-color: rgb(43, 36, 36);
+      border-radius: 10px;
+      padding: 50px;
+      margin-top: 200px;
+      margin-bottom: 200px;
+    }
+
+    .service_header {
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .service_grid {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .service_icon {
+      width: 300px;
+      height: 300px;
+      border: 1px solid yellow;
+      box-shadow: 0 0px 10px yellow;
+      border-radius: 10px;
+      margin: 15px auto;
+      background-color: black;
+    }
+
+    .short_line {
+      text-align: center;
+    }
+
+    .service_icon img {
+      width: 100%;
+    }
+
+    .service_title {
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    .service_text {
+      font-size: 16px;
+      padding-left: 10px;
+    }
+
+    h2,
+    h3,
+    p,
+    li {
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .progress {
+      background-color: rgb(43, 36, 36);
+      border-radius: 10px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-top: 200px;
+      margin-bottom: 200px;
+    }
+
+    .progress_grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+    }
+
+    .box {
+      width: 330px;
+      height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .progress_title {
+      font-size: 16px;
+      font-weight: bold;
+      color: yellow;
+      font-family: sans-serif;
+      margin: 0;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
+
+    .progress_subtitle {
+      font-size: 30px;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .status {
+      font-size: 14px;
+      font-family: sans-serif;
+      margin: 0;
+      padding-top: 5px;
+      padding-bottom: 0;
+    }
+
+
+
+    footer {
+      background-color: rgb(43, 36, 36);
+      border-radius: 10px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+
+    .footer_header {
+      font-size: 16px;
+      font-weight: bold;
+      color: yellow;
+      font-family: sans-serif;
+      margin: 0;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
+
+    .footer_grid {
+      width: 70%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer_nav {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .footer {
+      color: white;
+      font-size: 14px;
+      padding-top: 20px;
+      text-decoration: none;
+    }
+
+    .footer:hover {
+      color: yellow;
+    }
+
+    /* Animation */
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translate(-20px, -50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0, -50%);
+      }
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      min-height: 100vh;
+      color: #f5f7fa;
+      background: linear-gradient(270deg, #0a1cff, #1fe762, #0a1cff);
+      background-size: 600% 600%;
+      animation: gradientMove 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    @media (max-width:1024px) {
+      .page-label {
+        font-size: 25px;
+      }
+
+      .hero_grid {
+        grid-template-columns: 400px 1fr;
+      }
+
+      .hero_nav {
+        width: 90%;
+      }
+
+      .content_flex {
+        height: 150px;
+      }
+
+      footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+
+    @media (max-width:768px) {
+
+      .services {
+        padding: 20px 30px 20px 0px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+      }
+
+      .service_grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+
+
+      .hero_grid {
+        grid-template-columns: 200px 1fr;
+      }
+
+      .hero_nav {
+        width: 90%;
+      }
+
+      .massage {
+        font-size: 16px;
+        letter-spacing: 5px;
+      }
+
+      .brend_name {
+        font-size: 35px;
+      }
+
+      .content_flex {
+        height: 100px;
+      }
+
+      .span_content {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .progress {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+      }
+
+      .progress_subtitle {
+        font-size: 25px;
+      }
+
+      footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .footer {
+        padding-top: 5px;
+      }
+    }
+
+    @media (max-width:360px) {
+      .page-label {
+        font-size: 16px;
+        letter-spacing: 0px;
+        margin: 40px 0;
+      }
+
+      .hero_nav {
+        width: 100%;
+        margin: 3px 0;
+        padding-top: 30px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+      }
+
+      .hero_grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        margin: 30px 0;
+      }
+
+      .hero_title {
+        text-align: left;
+      }
+
+      .services {
+        padding: 20px 0 20px 0;
+        margin: 20px 0;
+      }
+
+      .service_icon {
+        margin: 15px 40px 10px -10px;
+
+      }
+
+      .service_grid {
+        grid-template-columns: 1fr;
+      }
+
+      .massage {
+        font-size: 14px;
+        letter-spacing: 0px;
+
+      }
+
+      .brend_name {
+        font-size: 25px;
+      }
+
+      .content_flex {
+        height: 100px;
+      }
+
+      .span_content {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+
+      .progress {
+        background-color: rgb(43, 36, 36);
+        border-radius: 10px;
+        padding: 20px 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .progress_grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+      }
+
+      .box {
+        width: 330px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .progress_title {
+        font-size: 16px;
+        font-weight: bold;
+        color: yellow;
+        font-family: sans-serif;
+        margin: 0;
+        padding-top: 5px;
+        padding-bottom: 15px;
+      }
+
+      .progress_subtitle {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      footer {
+        padding: 40px 0px;
+      }
+
+      .footer_grid {
+        width: 90%;
+      }
+
+      .hero {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(112, 106, 106);
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+
+      .flex-container {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 28px;
+        padding: 10px 0px;
+      }
+
+      .profile-img {
+        width: 0px;
+        margin: 0px auto;
+      }
+
+      .profile {
+        width: 0%;
+      }
+
+      .section-subtext {
+        padding: 10px 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Section header -->
+  <header>
+    <!-- Navigation list -->
+    <div class="hero_grid">
+      <div class="hero_title">
+        <h1 class="page-label">FABRICATION</h1>
+      </div>
+      <div class="hero_nav">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="project.html">Projects</a>
+          <a href="service.html">services</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">About Contact</a>
+        </nav>
+      </div>
+    </div>
+    <div class="brend">
+      <p class="massage">Providing all kinds of services</p>
+      <h1 class="brend_name">Xabas Welding C02 qaulity products</h1>
+    </div>
+  </header>
+
+  <!-- Main content -->
+
+
+  <main>
+
+    <section class="hero">
+      <div class="flex-container">
+        <div class="text-content">
+          <h2 class="section-title">Professional Welding Services</h2>
+
+          <p class="section-text">
+
+            We provide reliable welding services for gates, burglar bars, fencing, staircases,
+            repairs, and custom steel work. Our focus is strong, clean, and durable finishes
+            that last.
+          </p>
+        </div>
+        <div class="profile-img">
+          <img class="profile" src="images/556110853_122236905194150679_8036036690270727956_n.jpg" alt="">
+        </div>
+      </div>
+
+      <p class="section-subtext">
+        Serving homes and small businesses with quality workmanship and fair pricing.
+      </p>
+    </section>
+
+    <section class="services">
+      <h2 class="service_header">Our Services</h2>
+      <div class="service_grid">
+        <div class="service_icon">
+          <img src="" alt="">
+
+          <h3 class="service_title">WELDING SERVICES</h3>
+          <!-- <p class="service_text">selection of gates</p> -->
+          <ul>
+            <li>Gate welding & installation</li>
+            <li>Burglar bars & security gates</li>
+            <li>Steel doors & Frames</li>
+            <li>Balustrades & railings</li>
+            <li>Carports & steel structures</li>
+            <li>Repairs & re-welding</li>
+            <li>Custom metal fabrication</li>
+            <li>On-site welding services</li>
+          </ul>
+        </div>
+
+        <div class="service_icon">
+          <img src="" alt="">
+
+          <h3 class="service_title">BUILDING & CONSTRUCTION</h3>
+          <!-- <p class="service_text"> burglar bars</p> -->
+          <ul>
+            <li>Bricklaying</li>
+            <li>Plastering</li>
+            <li>Concrete work</li>
+            <li>Foundations</li>
+            <li>Small renovations</li>
+            <li>Boundary walls</li>
+            <li>Paving</li>
+            <li>Retaining walls</li>
+          </ul>
+        </div>
+
+        <div class="service_icon">
+          <img src="" alt="">
+
+          <h3 class="service_title">HANDYMAN & GENERAL WORK</h3>
+          <!-- <p class="service_text">fencing & Staircases & handrails</p> -->
+          <ul>
+            <li>General repairs</li>
+            <li>Maintainance work</li>
+            <li>Installations & fittings</li>
+            <li>Doors & hinges repairs</li>
+            <li>Window repairs</li>
+            <li>Shelving installation</li>
+            <li>Home & business maintanence</li>
+          </ul>
+        </div>
+
+        <div class="service_icon">
+          <img src="" alt="">
+
+          <h3 class="service_title">METAL & STEEL WORK</h3>
+          <!-- <p class="service_text">On-site repairs & projects completed for clients.</p> -->
+          <ul>
+            <li>cutting & grinding</li>
+            <li>Steel repairs</li>
+            <li>Structural steel work</li>
+            <li>Custom steel designs</li>
+            <li>Metal reinforcement</li>
+          </ul>
+        </div>
+
+        <div class="service_icon">
+          <img src="" alt="">
+
+          <h3 class="service_title">RESIDENTAIL & COMMERCIAL SERVICES</h3>
+          <!-- <p class="service_text">On-site repairs & projects completed for clients.</p> -->
+          <ul>
+            <li>Home projects</li>
+            <li>Business premises work</li>
+            <li>Workshops & Factories</li>
+            <li>On-site assessments</li>
+            <li>Custom solutions</li>
+          </ul>
+        </div>
+
+        <div class="service_icon">
+          <img src="" alt="">
+
+          <h3 class="service_title">METAL & STEEL WORK</h3>
+          <!-- <p class="service_text">On-site repairs & projects completed for clients.</p> -->
+          <ul>
+            <li>cutting & grinding</li>
+            <li>Steel repairs</li>
+            <li>Structural steel work</li>
+            <li>Custom steel designs</li>
+            <li>Metal reinforcement</li>
+          </ul>
+        </div>
+      </div>
+      <p class="short_line"><i>No job is too small or too big - if it involves metal, building, or repairs, we handle
+          it</i></p>
+    </section>
+
+    <section class="progress">
+
+      <div class="progress_grid">
+        <div class="box">
+          <p class="progress_title">JUST CONSTRUCTION</p>
+          <p class="progress_subtitle">Get your home done</p>
+        </div>
+        <div class="box">
+          <p class="progress_title">GET IN TOUCH</p>
+          <P class="status">Why not ask one of our talented web digital mananger for a consultation today? &#8594;</P>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="footer_grid">
+      <div>
+        <h3 class="footer_header">ADDRESS</h3>
+        <nav class="footer_nav">
+          <a class="footer" href="" target="_blank">street</a>
+          <a class="footer" href="" target="_blank">contact</a>
+          <a class="footer" href="" target="_blank">Email</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer_header">WHO WE ARE</h3>
+        <nav class="footer_nav">
+          <a class="footer" href="" target="_blank">About us</a>
+          <a class="footer" href="" target="_blank">Our Values</a>
+          <a class="footer" href="" target="_blank">Working Process</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer_header">WEBSITE CREATOR</h3>
+        <nav class="footer_nav">
+          <a class="footer" href="" target="_blank">Lwandile Jaison</a>
+          <a class="footer" href="" target="_blank">Web Developer</a>
+          <a class="footer" href="" target="_blank">Portfolio</a>
+          <a class="footer" href="" target="_blank">Contact Developer</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
