@@ -4,379 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Linking Google fonts for icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- Linking SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
   <title>Projects</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    header {
-      width: 100%;
-      height: 600px;
-      /* background-image: url(""); */
-      /* background-repeat: no-repeat; */
-      /* background-attachment: fixed; */
-      background-position: center;
-      background-size: cover;
-    }
-
-    .hero_grid {
-      width: 90%;
-      display: grid;
-      grid-template-columns: 500px 1fr;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    .brend {
-      margin-top: 200px;
-    }
-
-    .massage {
-      font-size: 20px;
-      letter-spacing: 10px;
-      text-align: center;
-      margin-bottom: 0;
-    }
-
-    .brend_name {
-      font-size: 50px;
-      text-align: center;
-      margin-top: 0;
-    }
-
-    .hero_title {
-      text-align: center;
-      padding: 0;
-      margin: 0;
-    }
-
-    .hero_nav {
-      width: 50%;
-      margin-right: auto;
-      margin-left: auto;
-      padding-top: 30px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .progress {
-      background-color: rgb(43, 36, 36);
-      border-radius: 10px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      margin-top: 200px;
-      margin-bottom: 200px;
-    }
-
-    .progress_grid {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      row-gap: 10px;
-    }
-
-    .box {
-      width: 330px;
-      height: 100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .progress_title {
-      font-size: 16px;
-      font-weight: bold;
-      color: yellow;
-      font-family: sans-serif;
-      margin: 0;
-      padding-top: 5px;
-      padding-bottom: 15px;
-    }
-
-    .progress_subtitle {
-      font-size: 30px;
-      font-weight: 900;
-      margin: 0;
-    }
-
-    .status {
-      font-size: 14px;
-      font-family: sans-serif;
-      margin: 0;
-      padding-top: 5px;
-      padding-bottom: 0;
-    }
-
-
-
-    footer {
-      background-color: rgb(43, 36, 36);
-      border-radius: 10px;
-      padding-top: 100px;
-      padding-bottom: 100px;
-      margin-top: 100px;
-      margin-bottom: 10px;
-    }
-
-    .footer_header {
-      font-size: 16px;
-      font-weight: bold;
-      color: yellow;
-      font-family: sans-serif;
-      margin: 0;
-      padding-top: 5px;
-      padding-bottom: 15px;
-    }
-
-    .footer_grid {
-      width: 70%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 10px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .footer_nav {
-      display: flex;
-      flex-direction: column;
-
-    }
-
-    .footer {
-      color: white;
-      font-size: 14px;
-      padding-top: 20px;
-      text-decoration: none;
-    }
-
-    .footer:hover {
-      color: yellow;
-    }
-
-    .page-label {
-      margin-top: 40px;
-      transform: translateY(50%);
-
-      font-size: 40px;
-      letter-spacing: 4px;
-      font-weight: 900;
-      writing-mode: horizontal-tb;
-      /* vertical text */
-      text-orientation: mixed;
-
-      opacity: 0;
-      animation: slideFadeIn 1.2s ease-out forwards;
-    }
-
-    /* Animation */
-    @keyframes slideFadeIn {
-      0% {
-        opacity: 0;
-        transform: translate(-20px, -50%);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translate(0, -50%);
-      }
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      min-height: 100vh;
-      color: #f5f7fa;
-      background: linear-gradient(270deg, #0a1cff, #1fe762, #0a1cff);
-      background-size: 600% 600%;
-      animation: gradientMove 15s ease infinite;
-      overflow-x: hidden;
-    }
-
-    @keyframes gradientMove {
-
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-
-    @media (max-width:1024px) {
-      .page-label {
-        font-size: 25px;
-      }
-
-      .hero_grid {
-        grid-template-columns: 400px 1fr;
-      }
-
-      .hero_nav {
-        width: 90%;
-      }
-
-      .content_flex {
-        height: 150px;
-      }
-
-      footer {
-        padding-top: 50px;
-        padding-bottom: 50px;
-      }
-    }
-
-    @media (max-width:768px) {
-      .hero_grid {
-        grid-template-columns: 200px 1fr;
-      }
-
-      .hero_nav {
-        width: 90%;
-      }
-
-      .massage {
-        font-size: 16px;
-        letter-spacing: 5px;
-      }
-
-      .brend_name {
-        font-size: 35px;
-      }
-
-      .content_flex {
-        height: 100px;
-      }
-
-      .span_content {
-        font-size: 20px;
-        margin: 10px 0;
-      }
-
-      .progress {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        margin-top: 150px;
-        margin-bottom: 150px;
-      }
-
-      .progress_subtitle {
-        font-size: 25px;
-      }
-
-      footer {
-        padding-top: 50px;
-        padding-bottom: 50px;
-      }
-
-      .footer {
-        padding-top: 5px;
-      }
-    }
-
-    @media (max-width:360px) {
-      .page-label {
-        font-size: 16px;
-        letter-spacing: 0px;
-        margin: 40px 0;
-      }
-
-      .hero_nav {
-        width: 100%;
-        margin: 3px 0;
-        padding-top: 30px;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        padding: 0;
-        margin: 0;
-        font-size: 10px;
-      }
-
-      .hero_grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 120px 1fr;
-        margin: 30px 0;
-      }
-
-      .hero_title {
-        text-align: left;
-      }
-
-      .massage {
-        font-size: 14px;
-        letter-spacing: 0px;
-
-      }
-
-      .brend_name {
-        font-size: 25px;
-      }
-
-      .progress {
-        background-color: rgb(43, 36, 36);
-        border-radius: 10px;
-        padding: 20px 0;
-        margin-top: 50px;
-        margin-bottom: 50px;
-      }
-
-      .progress_grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 10px;
-      }
-
-      .box {
-        width: 330px;
-        height: 100px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .progress_title {
-        font-size: 16px;
-        font-weight: bold;
-        color: yellow;
-        font-family: sans-serif;
-        margin: 0;
-        padding-top: 5px;
-        padding-bottom: 15px;
-      }
-
-      .progress_subtitle {
-        font-size: 22px;
-        font-weight: 500;
-      }
-
-      footer {
-        padding: 40px 0px;
-      }
-
-      .footer_grid {
-        width: 90%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="swipe.css">
 </head>
 
 <body>
@@ -397,11 +32,254 @@
     </div>
     <div class="brend">
       <p class="massage">Providing all kinds of services</p>
-      <h1 class="brend_name">Xabas Welding C02 qaulity products</h1>
+      <h1 class="brend_name">Xabas Welding CO2 quality products</h1>
     </div>
   </header>
 
   <main>
+
+    <div class="container swiper">
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/one.jpg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/two.jpg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge two">
+              Handyman
+            </h3>
+            <p class="card-title">HANDYMAN & GENERAL WORK</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/three.jpg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge three">
+              Architect
+            </h3>
+            <p class="card-title">RESIDENTIAL & COMMERCIAL SERVICES</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/four.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge four">
+              Architect
+            </h3>
+            <p class="card-title">No job is too small or too big</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/five.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge five">
+              Architect
+            </h3>
+            <p class="card-title">quality workmanship and fair pricing.</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container swiper">
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/six.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge six">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/seven.png" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge seven">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/four.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge four">
+              Architect
+            </h3>
+            <p class="card-title">No job is too small or too big</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/eight.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge eight">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/nine.jpg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge nine">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container swiper">
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/six.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge six">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/seven.png" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge seven">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/eight.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge eight">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/nine.jpg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge nine">
+              Architect
+            </h3>
+            <p class="card-title">BUILDING & CONSTRUCTION</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="image/five.jpeg" alt="card-image" class="card-image">
+            <!-- <div class="card-details"> -->
+            <h3 class="badge five">
+              Architect
+            </h3>
+            <p class="card-title">quality workmanship and fair pricing.</p>
+            <button class="card-button material-symbols-rounded" aria-label="View project">
+              arrow_forward
+            </button>
+            <!-- </div> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="swiper-pagination"></div>
+    <div class="swipe-slide-button swiper-button-prev"></div>
+    <div class="swipe-slide-button swiper-button-next"></div>
+    </div>
+
     <section class="progress">
 
       <div class="progress_grid">
@@ -409,9 +287,16 @@
           <p class="progress_title">JUST CONSTRUCTION</p>
           <p class="progress_subtitle">Get your home done</p>
         </div>
-        <div class="box">
-          <p class="progress_title">GET IN TOUCH</p>
-          <P class="status">Why not ask one of our talented web digital mananger for a consultation today? &#8594;</P>
+        <div class="box_with_logo">
+          <div>
+            <p class="progress_title">FOR MORE OF MY WORK</p>
+            <P class="status">Visit me now&#8594;</P>
+          </div>
+          <div class="logo_box">
+            <img src="image/instgram.jpeg" alt="facebook_logo" class="logo">
+            <img src="image/instgram.jpeg" alt="Whatapp_logo" class="logo">
+            <img src="image/instgram.jpeg" alt="Google_logo" class="logo">
+          </div>
         </div>
       </div>
     </section>
@@ -447,143 +332,44 @@
       </div>
     </div>
   </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper(".container.swiper", {
+      spaceBetween: 30,
+      loop: true,
+      grabCursor: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+  </script>
+
+
+
+
 </body>
 
 </html>
-
-<!-- 
-    .bars {
-      border: 1px solid blue;
-      margin: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .gate {
-      border: 1px solid red;
-      margin: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .windows {
-      border: 1px solid green;
-      margin: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .home {
-      border: 1px solid orange;
-      margin: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .tools {
-      border: 1px solid purple;
-      margin: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    img {
-      width: 300px;
-      height: 300px;
-    } -->
-
-
-<!--     
-    <section class="portfolio">
-      <h2 class="progress_header">Progress</h2>
-      <h2 class="portfolio_header">Our work</h2>
-      <div class="bars">
-        <div><img src="images/3.jpg" alt="Bars"></div>
-        <div><img src="images/557369360_2032374477299094_7904692522443588127_n.jpg" alt="gate"></div>
-        <div><img src="images/617449024_122252494082150679_4715350891179012550_n.jpg" alt="gate"></div>
-        <div><img src="images/476799312_122197914080150679_4366550096840491958_n.jpg" alt="bar"></div>
-        <div><img src="images/480278457_122199112664150679_206845916651499918_n.jpg" alt="bar"></div>
-        <div><img src="images/615060717_122251859000150679_7802482371109139168_n.jpg" alt="bar"></div>
-        <div><img src="images/548875243_122234664788150679_2597981194411105298_n.jpg" alt="bar"></div>
-        <div><img src="images/548279096_122234664644150679_3918246285677760468_n.jpg" alt="bar"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
-      <div class="gate">
-        <div><img src="images/617093580_122252493986150679_3324843174005969609_n.jpg" alt="gate"></div>
-        <div><img src="images/476789316_122197914062150679_6678504226667210512_n.jpg" alt="gate"></div>
-        <div><img src="images/476799365_122197913966150679_4422436159794341021_n.jpg" alt="gate"></div>
-        <div><img src="images/476798061_122197914290150679_7261371356136620444_n.jpg" alt="gate"></div>
-        <div><img src="images/476800645_122197913978150679_7040442758420585382_n.jpg" alt="gate"></div>
-        <div><img src="images/477587843_122197914008150679_5558586599110357729_n.jpg" alt="gate"></div>
-        <div><img src="images/1.jpg" alt="gate"></div>
-        <div><img src="images/616508497_122251889180150679_2703073479756880232_n.jpg" alt="gate"></div>
-        <div><img src="images/615864369_122252494256150679_2008984174151198535_n.jpg" alt="gate"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
-      <div class="home">
-        <div><img src="images/edit2 .png" alt="home"></div>
-        <div><img src="images/484848552_122204848166150679_5456057532906547970_n.jpg" alt="home"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
-      <div class="windows">
-        <div><img src="images/edit 1.png" alt="window"></div>
-        <div><img src="images/479679372_122197914032150679_6179508204184073366_n.jpg" alt="window"></div>
-        <div><img src="images/615473129_122252494172150679_2462207200924937965_n.jpg" alt="window"></div>
-        <div><img src="images/615148992_122251889354150679_6550836591850450255_n.jpg" alt="window"></div>
-        <div><img src="images/615400190_122251889288150679_62983799753371160_n.jpg" alt="window"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
-      <div class="tools">
-        <div><img src="images/601888047_122248643720150679_2920007008736546946_n.jpg" alt="tools"></div>
-        <div><img src="images/593637938_122245750772150679_57141913938371327_n.jpg" alt="tools"></div>
-        <div><img src="images/edit3.png" alt="3leg"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
-      <div class="">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </section> -->
