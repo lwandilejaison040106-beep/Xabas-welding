@@ -1,0 +1,309 @@
+
+    * {
+      box-sizing: border-box;
+    }
+
+    header {
+      width: 100%;
+      height: 600px;
+      /* background-image: url("images/Blog.jpeg"); */
+      /* background-repeat: no-repeat; */
+      /* background-attachment: fixed; */
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero_grid {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .brend {
+      margin-top: 200px;
+    }
+
+    .massage {
+      font-size: 20px;
+      letter-spacing: 10px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .brend_name {
+      font-size: 50px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .hero_title {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero_nav {
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 30px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer {
+      background-color: rgb(43, 36, 36);
+      border-radius: 10px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+
+    .footer_header {
+      font-size: 16px;
+      font-weight: bold;
+      color: yellow;
+      font-family: sans-serif;
+      margin: 0;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
+
+    .footer_grid {
+      width: 70%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer_nav {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .footer {
+      color: white;
+      font-size: 14px;
+      padding-top: 20px;
+      text-decoration: none;
+    }
+
+    .footer:hover {
+      color: yellow;
+    }
+
+    .page-label {
+      margin-top: 40px;
+      transform: translateY(50%);
+
+      font-size: 40px;
+      letter-spacing: 4px;
+      font-weight: 900;
+      writing-mode: horizontal-tb;
+      /* vertical text */
+      text-orientation: mixed;
+
+      opacity: 0;
+      animation: slideFadeIn 1.2s ease-out forwards;
+    }
+
+    /* Animation */
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translate(-20px, -50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0, -50%);
+      }
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      min-height: 100vh;
+      color: #f5f7fa;
+      background: linear-gradient(270deg, #0a1cff, #1fe762, #0a1cff);
+      background-size: 600% 600%;
+      animation: gradientMove 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    @media (max-width:1024px) {
+      .page-label {
+        font-size: 25px;
+      }
+
+      .hero_grid {
+        grid-template-columns: 400px 1fr;
+      }
+
+      .hero_nav {
+        width: 90%;
+      }
+
+      .content_flex {
+        height: 150px;
+      }
+
+      footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+
+    @media (max-width:768px) {
+      .hero_grid {
+        grid-template-columns: 200px 1fr;
+      }
+
+      .hero_nav {
+        width: 90%;
+      }
+
+      .massage {
+        font-size: 16px;
+        letter-spacing: 5px;
+      }
+
+      .brend_name {
+        font-size: 35px;
+      }
+
+      .content_flex {
+        height: 100px;
+      }
+
+      .span_content {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .footer {
+        padding-top: 5px;
+      }
+    }
+
+    @media (max-width:360px) {
+      header {
+        margin-top: -50px;
+      }
+
+      .page-label {
+        font-size: 16px;
+        letter-spacing: 0px;
+        margin: 40px 0;
+      }
+
+      .hero_nav {
+        width: 100%;
+        margin: 3px 0;
+        padding-top: 30px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+      }
+
+      .hero_grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        margin: 30px 0;
+      }
+
+      .hero_title {
+        text-align: left;
+      }
+
+      .massage {
+        font-size: 14px;
+        letter-spacing: 0px;
+      }
+
+      .brend_name {
+        font-size: 25px;
+      }
+
+      footer {
+        padding: 40px 0px;
+      }
+
+      .footer_grid {
+        width: 90%;
+      }
+
+      .hero {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(112, 106, 106);
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+
+      .flex-container {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 28px;
+        padding: 10px 0px;
+      }
+
+      .profile-img {
+        width: 0px;
+        margin: 0px auto;
+      }
+
+      .profile {
+        width: 0%;
+      }
+
+      .section-subtext {
+        padding: 10px 0px;
+      }
+    }

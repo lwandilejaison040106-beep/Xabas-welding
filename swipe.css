@@ -1,9 +1,8 @@
 /* Google fonts link */
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Inter:opsz,wght@14..32,100..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
   box-sizing: border-box;
-  font-family: "inter", sans-serif;
 }
 
 
@@ -155,7 +154,6 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: #5372F0;
-  color: #000;
   transform: translateY(1220%);
 }
 
@@ -163,24 +161,13 @@
   height: 13px;
   width: 13px;
   opacity: 0.5;
-  background-color: #e7e8ec;
-
+  background-color: #ffffff;
 }
 
 .swiper-pagination-bullet-active {
   opacity: 1;
   background-color: #007BFF;
 }
-
-
-
-/* .swipe-slide-button .swiper-pagination-button {
-  color: #5372F0;
- 
-
-} */
-
-
 
 header {
   width: 100%;
@@ -242,10 +229,8 @@ nav a {
 .progress {
   background-color: rgb(43, 36, 36);
   border-radius: 10px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  padding: 50px 0;
+  margin: 200px 0;
 }
 
 .progress_grid {
@@ -258,8 +243,7 @@ nav a {
 .box {
   width: 330px;
   height: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .box_with_logo {
@@ -321,7 +305,7 @@ nav a {
   transform: translateY(-15px);
   /* box-shadow: 0px 0px 25px yellow,
     0px 0px 50px yellow;*/
-  transition: 1s ease all; 
+  transition: 1s ease all;
 }
 
 
@@ -329,10 +313,8 @@ nav a {
 footer {
   background-color: rgb(43, 36, 36);
   border-radius: 10px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-top: 100px;
-  margin-bottom: 10px;
+  padding: 100px 0;
+  margin: 100px 0 10px 0
 }
 
 .footer_header {
@@ -341,8 +323,7 @@ footer {
   color: yellow;
   font-family: sans-serif;
   margin: 0;
-  padding-top: 5px;
-  padding-bottom: 15px;
+  padding: 5px 0 15px 0;
 }
 
 .footer_grid {
@@ -350,8 +331,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .footer_nav {
@@ -439,17 +419,30 @@ body {
     width: 90%;
   }
 
-  .content_flex {
-    height: 150px;
+  footer {
+    padding: 50px 0;
   }
 
-  footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  .footer {
+    padding: 5px;
+    width: 90%;
   }
 }
 
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
+  .swiper-wrapper {
+    margin: 0 10px 25px;
+  }
+
+  .swiper-slider .slider-button {
+    display: none;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
   .hero_grid {
     grid-template-columns: 200px 1fr;
   }
@@ -464,36 +457,16 @@ body {
   }
 
   .brend_name {
-    font-size: 35px;
-  }
-
-  .content_flex {
-    height: 100px;
-  }
-
-  .span_content {
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 39px;
   }
 
   .progress {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: 150px;
-    margin-bottom: 150px;
-  }
-
-  .progress_subtitle {
-    font-size: 25px;
+    padding: 10px 0;
+    margin: 100px 0;
   }
 
   footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .footer {
-    padding-top: 5px;
+    padding: 30px 0
   }
 }
 
@@ -544,15 +517,12 @@ body {
   }
 
   .progress {
-    background-color: rgb(43, 36, 36);
-    border-radius: 10px;
-    padding: 20px 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 0;
+
   }
 
+
   .progress_grid {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 10px;
@@ -561,46 +531,22 @@ body {
   .box {
     width: 330px;
     height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   .progress_title {
     font-size: 16px;
-    font-weight: bold;
-    color: yellow;
-    font-family: sans-serif;
     margin: 0;
-    padding-top: 5px;
-    padding-bottom: 15px;
+    padding: 5px o 15px 0;
   }
 
   .progress_subtitle {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 100;
   }
 
   footer {
     padding: 40px 0px;
-  }
-
-  .footer_grid {
-    width: 90%;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-  .swiper-wrapper {
-    margin: 0 10px 25px;
-  }
-
-  .swiper-slider .slider-button {
-    display: none;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
+    margin: 50px 0 0;
   }
 }
