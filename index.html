@@ -32,15 +32,59 @@
 
   <main>
     <section class="content">
+
+      <h1 class="content-title">Special Project</h1>
       <div class="content_grid">
         <div class="content_flex">
           <p><span class="span_content">QUALITY</span> Strength Precision</p>
+          <!-- <p>
+            Great service...
+            <span id="quality" class="review-extra">
+              Extra hidden text about quality...
+            </span>
+          </p> -->
+          <div class="review-card">
+            <p class="review-text"
+              data-full="  We focus on delivering quality service, honest communication, and results you can trust. Every project is handled with care, attention to detail, and respect for our clients’ needs. Our goal is to deliver work that lasts, adds value, and represents our clients professionally.">
+              We focus on delivering quality service, honest...
+            </p>
+
+            <button onclick="toggleReview('quality')" class="more-btn">more</button>
+            <div class="name">Lwandi</div>
+          </div>
         </div>
+
         <div class="content_flex">
           <p><span class="span_content">SECRETS OF SUCCESS</span> FOR OUR WORK</p>
+
+          <div class="review-card">
+            <p class="review-text"
+              data-full="Quality is at the heart of everything we do. From the first consultation to the final delivery, we ensure that every detail meets high standards. We use reliable methods, proven processes, and careful planning to make sure the final result is not only visually appealing but also durable and effective.">
+              Quality is at the heart of everything we do. From the first consultation...
+            </p>
+
+            <button onclick="toggleReview('secrets')" class="more-btn">more</button>
+            <div class="name">Sihle </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="content-title">Special Project</h1>
+      <div class="long_content">
+        <p><span class="span_content">SECRETS OF SUCCESS</span> FOR OUR WORK</p>
+
+        <div class="review-card">
+          <p class="review-text"
+            data-full="Our success comes from understanding our clients, listening carefully, and turning ideas into reality. We believe that clear communication, consistency, and dedication are the key factors behind every successful project. By working closely with our clients and staying committed to excellence, we build strong relationships and deliver results that exceed expectations..">
+            Our success comes from understanding our clients, listening....
+          </p>
+
+          <button onclick="toggleReview('secrets')" class="more-btn">more</button>
+          <div class="name">Sihle </div>
         </div>
       </div>
     </section>
+
 
     <section class="progress">
       <div class="progress_grid">
@@ -61,30 +105,69 @@
       <div>
         <h3 class="footer_header">ADDRESS</h3>
         <nav class="footer_nav">
-          <a class="footer" href="" target="_blank">street</a>
-          <a class="footer" href="" target="_blank">contact</a>
-          <a class="footer" href="" target="_blank">Email</a>
+          <a class="footer"
+            href="https://www.property24.com/property-values/2680-umkhele-street/ezakheni/ladysmith/kwazulu-natal/oj6i6pkqiyci55bt3o6jlgdwpq3yi7w4szhfyannjuorcvqobqamnxqc4zacng34wrronvbzku4lpw4nynri5baoxjgyirs7qay2hra"
+            target="_blank">street</a>
+          <a class="footer" href="tel:+27796429335" target="_blank">contact</a>
+          <a class="footer" href="mailto:" target="_blank">Email</a>
         </nav>
       </div>
       <div>
         <h3 class="footer_header">WHO WE ARE</h3>
         <nav class="footer_nav">
-          <a class="footer" href="" target="_blank">About us</a>
-          <a class="footer" href="" target="_blank">Our Values</a>
-          <a class="footer" href="" target="_blank">Working Process</a>
+          <a class="footer" href="blog.html#about_Us">About us</a>
+          <a class="footer" href="blog.html#our_values">Our Values</a>
+          <a class="footer" href="blog.html#working_process">Working Process</a>
         </nav>
       </div>
       <div>
         <h3 class="footer_header">WEBSITE CREATOR</h3>
         <nav class="footer_nav">
-          <a class="footer" href="" target="_blank">Lwandile Jaison</a>
-          <a class="footer" href="" target="_blank">Web Developer</a>
-          <a class="footer" href="" target="_blank">Portfolio</a>
-          <a class="footer" href="" target="_blank">Contact Developer</a>
+          <a class="footer" href="aboutUs.html" target="_blank">Lwandile Jaison</a>
+          <a class="footer" href="https://lwandilejaison040106-beep.github.io/portfolio/" target="_blank">Portfolio</a>
+          <a class="footer" href="https://github.com/lwandilejaison040106-beep" target="_blank">Web Developer</a>
+          <a class="footer" href="mailto:lwandilejaison040106@gmail.com" target="_blank">Contact Developer</a>
         </nav>
       </div>
     </div>
   </footer>
+
+
+  <script>
+    function toggleReview(type) {
+      const el = document.getElementById(type);
+      el.classList.toggle("show");
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+  <script>
+    const buttons = document.querySelectorAll(".more-btn");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".review-card");
+        const text = card.querySelector(".review-text");
+
+        // full text stored in data-full
+        const fullText = text.getAttribute("data-full");
+
+        // short preview stored in data-short (we save it once)
+        if (!text.dataset.short) {
+          text.dataset.short = text.innerText;
+        }
+
+        // if expanded -> collapse
+        if (btn.innerText === "less") {
+          text.innerText = text.dataset.short;
+          btn.innerText = "more";
+        } else {
+          text.innerText = fullText;
+          btn.innerText = "less";
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

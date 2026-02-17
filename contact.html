@@ -126,6 +126,11 @@
       padding: 20px;
       display: flex;
       justify-content: center;
+      transition: 0.5s ease-in-out;
+    }
+
+    .form-container:hover {
+      transform: scale(1.05);
     }
 
     .quote-form {
@@ -260,6 +265,80 @@
       }
     }
 
+
+    /* Container for form + contact info side by side */
+    .contact-container {
+      display: flex;
+      max-width: 1000px;
+      margin: 40px auto;
+      gap: 40px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .contact-info {
+      width: 100%;
+      max-width: 420px;
+      height: 608px;
+      margin-top: 21px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px yellow;
+      color: white;
+      transition: 0.5s ease-in-out;
+    }
+
+    .contact-info:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-info h2,
+    .form-section h2 {
+      font-size: 28px;
+      color: yellow;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .quick-links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .quick-links a {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 8px 15px;
+      background: black;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid yellow;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .quick-links a:hover {
+      background: yellow;
+      color: black;
+    }
+
+    .contact-container {
+      margin: 100px auto;
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .about-section{
+      align-items: center;
+      text-align: center;
+    }
     @media (max-width:1024px) {
       .page-label {
         font-size: 25px;
@@ -412,24 +491,49 @@
   </header>
 
   <main>
-    <div class="form-container">
-      <form class="quote-form">
-        <h2>Get Your Website Today</h2>
-        <p>Fill in the form below and I’ll get back to you within 24 hours.</p>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your name" required>
+    <!-- About Section -->
+    <section class="about-section">
+      <h2>About Xabas Welding</h2>
+      <p>We provide high-quality welding, fabrication, and construction services.</p>
+      <p>Our team ensures top-quality CO2 welding products for homes, businesses, and industrial projects.</p>
+    </section>
 
-        <label for="whatsapp">WhatsApp Number</label>
-        <input type="tel" id="whatsapp" placeholder="e.g. 071 234 5678" required>
+    <!-- Contact + Form Side by Side -->
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>📍 123 Main Street, City</p>
+        <p>📞 +27 71 234 5678</p>
+        <p>✉️ lwandilejaison040106@gmail.com</p>
+        <div class="quick-links">
+          <a href="https://wa.me/27712345678" target="_blank">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/lwandilejaison" target="_blank">LinkedIn</a>
+          <a href="portfolio.html" target="_blank">Portfolio</a>
+        </div>
+      </div>
 
-        <label for="message">write ypour massage</label>
-        <textarea id="message" rows="4" placeholder="Briefly explain what you need done" required></textarea>
 
-        <button type="submit">Request a Quote</button>
+      <div class="form-container">
+        <form class="quote-form">
+          <h2>Get Your Website Today</h2>
+          <p>Fill in the form below and I’ll get back to you within 24 hours.</p>
 
-        <p class="trust-boost">We well contact you as soon as possible, No obligation.</p>
-      </form>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required>
+
+          <label for="whatsapp">WhatsApp Number</label>
+          <input type="tel" id="whatsapp" placeholder="e.g. 071 234 5678" required>
+
+          <label for="message">write ypour massage</label>
+          <textarea id="message" rows="4" placeholder="Briefly explain what you need done" required></textarea>
+
+          <button type="submit">Request a Quote</button>
+
+          <p class="trust-boost">We well contact you as soon as possible, No obligation.</p>
+        </form>
+      </div>
     </div>
   </main>
 
