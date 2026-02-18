@@ -280,6 +280,7 @@ footer {
 }
 
 @media (max-width:1024px) {
+  
   .page-label {
     font-size: 25px;
   }
@@ -292,6 +293,10 @@ footer {
     width: 90%;
   }
 
+  .service_grid{
+    margin: 0 0 0 -15px;
+    padding: 0;
+  }
   .content_flex {
     height: 150px;
   }
@@ -303,27 +308,63 @@ footer {
 }
 
 @media (max-width:768px) {
-
   .hero_grid {
     grid-template-columns: 200px 1fr;
-    margin: 0
   }
 
   .hero_nav {
     width: 90%;
+    margin-left: 70px;
   }
 
   .massage {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 5px;
   }
 
   .brend_name {
-    font-size: 35px;
+    font-size: 39px;
   }
+
+  .flex-container {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr 270px;
+  }
+
+  .section-subtext {
+    padding-bottom: 30px;
+  }
+
+  .hero {
+    padding: 0 10px;
+    margin: 0;
+  }
+
+
+  .profile {
+    margin: 70px 0 0 20px;
+    padding: 0;
+    width: 80%;
+  }
+
 
   .content_flex {
     height: 100px;
+  }
+  
+
+  .service_icon {
+    margin: 0 0 10px 40px;
+    transition: 0.3s all ease-in-out;
+  }
+
+   .service_icon:hover{
+    transform: scale(0.5s);
+   }
+  .service_grid {
+    row-gap: 40px;
+
   }
 
   .span_content {
@@ -340,35 +381,6 @@ footer {
     font-size: 25px;
   }
 
-  footer {
-    padding: 50px 0;
-  }
-
-  .footer {
-    padding-top: 5px;
-  }
-
-  .page-label {
-    font-size: 20px;
-  }
-
-  .hero_grid {
-    grid-template-columns: 200px 1fr;
-  }
-
-  .hero_nav {
-    width: 90%;
-    margin-left: 0;
-  }
-
-  .massage {
-    font-size: 16px;
-    letter-spacing: 5px;
-  }
-
-  .brend_name {
-    font-size: 35px;
-  }
 
   .content_flex {
     height: 100px;
@@ -388,15 +400,6 @@ footer {
 
   .progress_subtitle {
     font-size: 25px;
-  }
-
-  footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .footer {
-    padding-top: 5px;
   }
 
   .services {
@@ -421,42 +424,81 @@ footer {
     font-size: 25px;
   }
 
-  .progress{
-    margin: 0;
-  }
-  .box{
+  .progress {
     margin: 0;
   }
 
-  .footer{
+  .box {
     margin: 0;
   }
 
-  .footer_grid{
-    margin-left: 70px;
+  footer {
+    padding: 20px 20px;
+    margin: 30px 0 0;
+  }
+
+  .footer_grid {
+    width: 100%;
+    column-gap: 30px;
+    margin: 0;
+  }
+
+  .footer {
+    font-size: 13px;
   }
 }
 
 @media (max-width:360px) {
 
-    .page-label {
+
+  header {
+    margin-top: -50px;
+  }
+
+  .page-label {
     font-size: 16px;
-    letter-spacing: 0;
-    margin-left: 0;
+    letter-spacing: 0px;
+    margin: 40px 0;
+  }
+
+  .hero_nav {
+    width: 100%;
+    margin: 3px 0;
+    padding-top: 30px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
   }
 
   .hero_grid {
     width: 100%;
-    grid-template-columns: 150px 1fr;
-    margin: 0px 0;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin: 30px 0;
   }
 
-  .hero_nav {
-    width: 90%;
+  .hero_title {
+    text-align: left;
   }
 
-  nav a {
-    font-size: 10px;
+  .massage {
+    font-size: 14px;
+    letter-spacing: 0px;
+
+  }
+
+  .brend_name {
+    font-size: 25px;
+  }
+
+  .span_content {
+    font-size: 16px;
+    margin: 10px 0;
   }
 
   .services {
@@ -465,7 +507,8 @@ footer {
   }
 
   .service_icon {
-    margin: 15px 40px 10px -10px;
+    margin: 15px 15px;
+    height: 270px;
 
   }
 
@@ -482,8 +525,7 @@ footer {
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(112, 106, 106);
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin: 30px o;
   }
 
   .flex-container {
@@ -492,7 +534,7 @@ footer {
   }
 
   .section-title {
-    font-size: 28px;
+    font-size: 22px;
     padding: 10px 0px;
   }
 
@@ -506,60 +548,48 @@ footer {
   }
 
   .section-subtext {
+    font-size: 14px;
     padding: 10px 0px;
-  } */
-   
+  }
 
-      header {
-        margin-top: -50px;
-      }
+  .massage {
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
 
-      .page-label {
-        font-size: 16px;
-        letter-spacing: 0px;
-        margin: 40px 0;
-      }
+  .brend_name {
+    font-size: 25px;
+  }
 
-      .hero_nav {
-        width: 100%;
-        margin: 3px 0;
-        padding-top: 30px;
-      }
+  .progress {
+    margin: 0;
+    padding: 10px 0 0;
+  }
 
-      nav a {
-        color: white;
-        text-decoration: none;
-        padding: 0;
-        margin: 0;
-        font-size: 10px;
-      }
+  .progress_grid {
+    display: block;
+  }
 
-      .hero_grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        margin: 0px 0;
-      }
+  .box {
+    font-size: 14px;
+    width: 300px;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
 
-      .hero_title {
-        text-align: left;
-      }
+  footer {
+    padding: 20px 10px;
+    margin: 30px 0 0;
+  }
 
-      .massage {
-        font-size: 14px;
-        letter-spacing: 0px;
-      }
+  .footer_grid {
+    width: 100%;
+    column-gap: 30px;
+    margin: 0;
+  }
 
-      .brend_name {
-        font-size: 25px;
-      }
-
-      footer {
-        padding: 40px 0px;
-      }
-
-      .footer_grid {
-        width: 90%;
-      }
+  .footer {
+    font-size: 10px;
+  }
 
 }
